@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  logger:
+    image: alpine
+    command: sh -c "while true; do echo $(date) - Hello, this is a continuous log; sleep 2; done"
+    restart: always
