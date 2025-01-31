@@ -5,3 +5,8 @@ services:
     image: alpine
     command: sh -c "while true; do echo $(date) - Hello, this is a continuous log; sleep 2; done"
     restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
